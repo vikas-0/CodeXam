@@ -115,11 +115,8 @@ namespace Program_Submission_Portal
                         strOutput = pProcess.StandardOutput.ReadToEnd();
                         if (strOutput.Contains(value))
                         {
-                            string blank = "";
-                            for(int i=0; i<value.Length; i++)
-                            {
-                                blank += " ";
-                            }
+                            string blank = " ";
+                            
                             blank = strOutput.Replace(value, blank);
                             
                             if (String.IsNullOrWhiteSpace(blank))
